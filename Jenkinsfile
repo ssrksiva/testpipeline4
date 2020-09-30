@@ -23,7 +23,7 @@ pipeline {
         sh 'git merge -s ours develop --allow-unrelated-histories'
         sh 'git config --global credential.username ssrksiva'
         sh 'git config --global credential.password 14Dec@1991'
-        sh 'git push https://2104ff3131e4ff265ad0e5f13ac9b569cd4ea91d@github.com/ssrksiva/testpipeline4.git HEAD:master -f'
+        sh 'git push https://b9e1f34cef0463191d5a3c44df0e44b17f356fb9@github.com/ssrksiva/testpipeline4.git HEAD:master -f'
       }
     }
 
