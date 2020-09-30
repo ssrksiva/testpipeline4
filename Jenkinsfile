@@ -23,10 +23,10 @@ pipeline {
         sh 'git merge -s ours develop --allow-unrelated-histories'
         sh 'git config --global credential.username ssrksiva'
         sh 'git config --global credential.password 14Dec@1991'
-		withCredentials([usernamePassword(credentialsId: 'testgithubcred', usernameVariable: 'user', passwordVariable: 'pass')]) {
-        sh 'git push https://${user}:${pass}@github.com/ssrksiva/testpipeline4.git HEAD:master -f'
-}
-        
+        withCredentials(bindings: [usernamePassword(credentialsId: 'testgithubcred', usernameVariable: 'user', passwordVariable: 'pass')]) {
+          sh 'git push https://${user}:${pass}@github.com/ssrksiva/testpipeline4.git HEAD:master -f'
+        }
+
       }
     }
 
